@@ -1,0 +1,49 @@
+{
+  "menuList": [
+    {
+      "id": "c90f16a8-1226-47fa-85fd-6c5a702ae7b8",
+      "name": "서브웨이 풀드포크 바비큐",
+      "calory": 327,
+      "carbonhydrate": 62,
+      "protein": 25,
+      "fat": 9,
+      "sodium": 689
+    },
+    {
+      "id": "e8cda7aa-73f1-40e2-97af-359df4847a59",
+      "name": "서브웨이 이탈리안 비엠티",
+      "calory": 388,
+      "carbonhydrate": 46,
+      "protein": 21,
+      "fat": 16,
+      "sodium": 1064
+    },
+    {
+      "id": "57763c34-a007-4978-a4d1-c199e39c6f48",
+      "name": "이삭토스트 햄치즈토스트",
+      "calory": 420,
+      "carbonhydrate": 48,
+      "protein": 19,
+      "fat": 17,
+      "sodium": 809
+    },
+    {
+      "id": "9d9a1f98-521a-44df-b933-ad596603834f",
+      "name": "이삭토스트 새우토스트",
+      "calory": 623,
+      "carbonhydrate": 20,
+      "protein": 18,
+      "fat": 10,
+      "sodium": 838
+    },
+    {
+      "id": "554fda4b-3ddf-4b41-8afb-98a4f28fed38",
+      "name": "이삭토스트 스페셜토스트",
+      "calory": 428,
+      "carbonhydrate": 57,
+      "protein": 19,
+      "fat": 16,
+      "sodium": 773
+    }
+  ]
+}
