@@ -13,6 +13,8 @@ function App() {
   const [menuList, setMenus] = useState(menus.menuList);
   const [menuFrequency, setFreq] = useState(menuFreq.menuFrequency);
 
+  const [findName, setName] = useState("");
+
   const addMenu = (name, calory, carbonhydrate, protein, fat, sodium) => {
     const new_id = v4();
     const newMenu = {
@@ -68,26 +70,51 @@ function App() {
 
   return (
     <div className="App">
-      <Header title="오늘 점심 뭐 먹지?" />
-      <p>
-        <b>==등록된 메뉴 리스트==</b>
-      </p>
-      <MenuLister
-        menus={menuList}
-        freqs={menuFrequency}
-        removeFromList={removeMenu}
-        updateList={updateMenuList}
-      />
-      <p>
-        <i>공지 추가하기</i>
-      </p>
-      <MenuEditor addToList={addMenu} />
-      <Footer copyright="소프트웨어개발실습2" />
-      <MenuRecommender
-        menus={menuList}
-        freqs={menuFrequency}
-        addFrequency={freqOneAdd}
-      />
+      <div className="wrapper">
+        <div className="container">
+          <section className="main-wrap">
+            <div className="main-left-container">
+              <Header title="오늘 점심 뭐 먹지?" />
+              <p>
+                ==등록된 메뉴 리스트==
+              </p>
+              <input
+                type="text"
+                value={findName}
+                onChange={(event) => setName(event.target.value)}
+                placeholder="Name to find..."
+              ></input>
+            </div>
+            <div className="main-right-container">
+              <img src={process.env.PUBLIC_URL + '/eat_food.png'} alt="main-food-icon" />
+            </div>
+            
+          </section>
+          <section className="menu-list-wrap">
+            <MenuLister
+                findName={findName}
+                menus={menuList}
+                freqs={menuFrequency}
+                removeFromList={removeMenu}
+                updateList={updateMenuList}
+              />
+          </section>
+          <section className="detail-wrap">
+            <h1 className="main-section-title">Today's pick!</h1>
+            <MenuRecommender
+              menus={menuList}
+              freqs={menuFrequency}
+              addFrequency={freqOneAdd}
+            />
+          </section>
+          <section className="menu-add-wrap">
+          <h1 className="main-section-title">메뉴 추가하기</h1>
+            <MenuEditor addToList={addMenu} />
+          </section>
+
+          <Footer copyright="소프트웨어개발실습2" />
+        </div>
+      </div>
     </div>
   );
 }

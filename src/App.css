@@ -1,38 +1,260 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  overflow-y: scroll;
+}
+.container{
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.main-wrap{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  padding: 50px 70px;
+  background-color: #e0f2f0;
+  border-radius: 1.5em;
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-wrap .main-left-container{
+  flex: 1 55%;
+}
+.main-wrap .main-left-container h1{
+  margin-bottom: 40px;
+  font-size: 2em;
+  font-weight: 700;
+}
+.main-wrap .main-left-container p{
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+.main-wrap .main-left-container input{
+  width: 80%;
+  padding: 15px 20px;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 3px 3px #999;
+}
+.main-wrap .main-right-container{
+  flex: 1 45%;
+}
+.main-wrap .main-right-container img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.menu-list-wrap{
+  width: 100%;
+}
+.menu-wrap{
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 150px;
+}
+.main-section-title{
+  margin-bottom: 45px;
+}
+.menu-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #e6e9ea;
+  height: 200px;
+  flex: 0 0 20%;
+  margin:0 20px 40px 20px;
+  border-radius: 1.5em;
+}
+.menu-list:nth-child(2n){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #dae6df;
+  height: 200px;
+  flex: 0 0 20%;
+  margin:0 20px 40px 20px;
+  border-radius: 1.5em;
+}
+.menu-list .menu-name{
+  font-weight: 600;
+  word-break: keep-all;
+}
+.menu-list .menu-info-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detail-wrap{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+  background-color: #dae6df;
+  padding: 15px 25px;
+  border-radius: 1.5em;
+}
+.detail-wrap .menu-rand-wrap{
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.detail-wrap .menu-rand-wrap .menu-rand-fd-name{
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.detail-wrap .menu-rand-wrap .menu-rand-left-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 30%;
+  position: relative;
+}
+.detail-wrap .menu-rand-wrap .menu-rand-left-container p{
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  word-break: keep-all;
+  text-align: center;
+}
+.detail-wrap .menu-rand-wrap .menu-rand-left-container button{
+  border: 1px solid black;
+  padding: 15px 20px;
+  border-radius: 0.5em;
+  background-color: #fff;
+  font-size: 1em;
+}
+.detail-wrap .menu-rand-wrap .menu-rand-left-container button:hover{
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+.detail-wrap .menu-rand-wrap .menu-rand-right-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1.1em;
+  word-break: keep-all;
+  flex: 0 0 60%;
+  line-height: 2em;
+}
+.menu-rand-again-btn{
+  border: 1px solid black;
+  padding: 15px 20px;
+  border-radius: 0.5em;
+  background-color: #fff;
+  font-size: 1em;
+  width: 30%;
+}
+.menu-rand-or-text{
+  font-size: 1.2em;
+  text-align: center;
+  width: 30%;
+}
+.menu-add-wrap{
+  margin-bottom: 100px;
+  width: 100%;
+}
+.menu-add-wrap .menu-add-form-container{
+  display: flex;
+  justify-content: space-between;
+}
+.menu-add-wrap .menu-add-form-container .menu-add-form-left{
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+}
+.menu-add-wrap .menu-add-form-container .menu-add-form-left input:first-child{
+  width: 80%;
+  padding: 15px 20px;
+  border-radius: 0.5em;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.menu-add-wrap .menu-add-form-container .menu-add-form-left button{
+  border: 1px solid black;
+  padding: 15px 20px;
+  border-radius: 0.5em;
+  background-color: #fff;
+  font-size: 1em;
+  width: 80%;
+}
+.menu-add-wrap .menu-add-form-container .menu-add-form-left button:hover{
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-add-wrap .menu-add-form-container .menu-add-form-right{
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-add-wrap .menu-add-form-container .menu-add-form-right input{
+  padding: 10px 20px;
+}
+.menu-add-wrap .menu-add-form-container .menu-add-form-right input:not(:last-child){
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1100px){
+  .main-wrap{
+    flex-direction: column;
+    min-height: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .main-wrap .main-left-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-wrap .main-left-container h1{
+    text-align: center;
+  }
+  .main-wrap .main-right-container{
+    margin-top: 50px;
+  }
+  .main-wrap .main-right-container img{
+    max-height: 300px;
+  }
+  .menu-list{
+    padding: 10px 20px;
+    flex: 0 0 40%;
+  }
+  .menu-list:nth-child(2n) {
+    padding: 10px 20px;
+    flex: 0 0 40%;
   }
 }
