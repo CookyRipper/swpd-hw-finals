@@ -17,39 +17,46 @@ function MenuListerDetail({
   const [showable, setShowable] = useState(false);
 
   return (
-    <div>
-      <p onClick={() => (showable ? setShowable(false) : setShowable(true))}>
-        {name}
-      </p>
-      {showable ? (
-        <div>
-          <p>
-            칼로리(열량): {calory}kcal 탄수화물: {carbonhydrate}g 단백질:{" "}
-            {protein}g 지방: {fat}g 나트륨: {sodium}mg, 최근 30일간 선택횟수:{" "}
-            {freq}회
-            <button
-              onClick={() =>
-                editable ? setEditable(false) : setEditable(true)
-              }
-            >
-              수정
-            </button>
-            <button onClick={() => removeFromList(id)}>삭제</button>
-          </p>
-        </div>
-      ) : null}
-      {editable ? (
-        <MenuEditor
-          id={id}
-          name={name}
-          calory={calory}
-          carbonhydrate={carbonhydrate}
-          protein={protein}
-          fat={fat}
-          sodium={sodium}
-          updateList={updateList}
-        />
-      ) : null}
+    <div className="menu-list">
+      <div>
+        <p
+          className="menu-name"
+          onClick={() => (showable ? setShowable(false) : setShowable(true))}
+        >
+          {name}
+        </p>
+        {showable ? (
+          <div className="menu-info-wrap">
+            <p className="menu-info">
+              칼로리(열량): {calory}kcal 탄수화물: {carbonhydrate}g 단백질:{" "}
+              {protein}g 지방: {fat}g 나트륨: {sodium}mg, 최근 30일간 선택횟수:{" "}
+              {freq}회
+            </p>
+            <div>
+              <button
+                onClick={() =>
+                  editable ? setEditable(false) : setEditable(true)
+                }
+              >
+                수정
+              </button>
+              <button onClick={() => removeFromList(id)}>삭제</button>
+            </div>
+          </div>
+        ) : null}
+        {editable ? (
+          <MenuEditor
+            id={id}
+            name={name}
+            calory={calory}
+            carbonhydrate={carbonhydrate}
+            protein={protein}
+            fat={fat}
+            sodium={sodium}
+            updateList={updateList}
+          />
+        ) : null}
+      </div>
     </div>
   );
 }

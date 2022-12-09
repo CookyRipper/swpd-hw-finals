@@ -11,7 +11,8 @@ function MenuRecommender({ menus = [], freqs = {}, addFrequency = (f) => f }) {
         freqs={freqs}
         addFrequency={addFrequency}
       />
-      <button onClick={forceUpdate}>다시 추천하기</button>
+      <p className="menu-rand-or-text">or</p>
+      <button className="menu-rand-again-btn" onClick={forceUpdate}>다시 추천하기</button>
     </div>
   );
 }

@@ -44,50 +44,54 @@ function MenuEditor({
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={inputName}
-          onChange={(event) => setName(event.target.value)}
-          placeholder="Menu Name"
-          required
-        />
-        <input
-          type="text"
-          value={InputCalory}
-          onChange={(event) => setCalory(event.target.value)}
-          placeholder="Calories (kcal)"
-          required
-        />
-        <input
-          type="text"
-          value={inputCarbon}
-          onChange={(event) => setCarbon(event.target.value)}
-          placeholder="Carbonhydrate (g)"
-          required
-        />
-        <input
-          type="text"
-          value={inputProtein}
-          onChange={(event) => setProtein(event.target.value)}
-          placeholder="Proteins (g)"
-          required
-        />
-        <input
-          type="text"
-          value={inputFat}
-          onChange={(event) => setFat(event.target.value)}
-          placeholder="Fats (g)"
-          required
-        />
-        <input
-          type="text"
-          value={inputSodium}
-          onChange={(event) => setSodium(event.target.value)}
-          placeholder="Sodiums (mg)"
-          required
-        />
-        <input type="submit" value={id ? "수정" : "추가"}></input>
+      <form className="menu-add-form-container" onSubmit={handleSubmit}>
+        <div className="menu-add-form-left">
+          <input
+            type="text"
+            value={inputName}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Input Menu Name"
+            required
+          />
+          <button type="submit" value={id ? "수정" : "추가"}>추가</button>
+        </div>
+        <div className="menu-add-form-right">
+          <input
+            type="text"
+            value={InputCalory}
+            onChange={(event) => setCalory(event.target.value)}
+            placeholder="Calories (kcal)"
+            required
+          />
+          <input
+            type="text"
+            value={inputCarbon}
+            onChange={(event) => setCarbon(event.target.value)}
+            placeholder="Carbonhydrate (g)"
+            required
+          />
+          <input
+            type="text"
+            value={inputProtein}
+            onChange={(event) => setProtein(event.target.value)}
+            placeholder="Proteins (g)"
+            required
+          />
+          <input
+            type="text"
+            value={inputFat}
+            onChange={(event) => setFat(event.target.value)}
+            placeholder="Fats (g)"
+            required
+          />
+          <input
+            type="text"
+            value={inputSodium}
+            onChange={(event) => setSodium(event.target.value)}
+            placeholder="Sodiums (mg)"
+            required
+          />
+        </div>
       </form>
     </div>
   );
